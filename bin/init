@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cd ~/SuperNET/iguana
+command ./marketmaker "{\"gui\":\"nogui\",\"client\":1, \"userhome\":\"/${HOME#"/"}\", \"passphrase\":\"$PASSPHRASE\", \"coins\":$COINS}"

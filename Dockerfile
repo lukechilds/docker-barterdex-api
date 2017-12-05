@@ -21,3 +21,7 @@ RUN git clone https://github.com/jl777/SuperNET && \
   cd SuperNET/iguana && \
   git checkout spvdex && \
   ./m_mm
+
+COPY ./bin /usr/local/bin
+ENTRYPOINT ["init"]
+EXPOSE 7783
