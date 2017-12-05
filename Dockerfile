@@ -23,6 +23,10 @@ RUN cd SuperNET/iguana && \
   git checkout spvdex && \
   ./m_mm
 
+RUN mv ~/SuperNET/iguana/marketmaker /usr/local/bin && \
+  mv ~/SuperNET/iguana/exchanges/coins ~/coins && \
+  rm -rf ~/SuperNET
+
 COPY ./bin /usr/local/bin
 ENTRYPOINT ["init"]
 EXPOSE 7783
