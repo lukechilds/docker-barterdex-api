@@ -8,7 +8,7 @@
 ## Usage
 
 ```
-docker run lukechilds/barterdex-api
+docker run -e PASSPHRASE="secure passphrase" -p 127.0.0.1:7783:7783 lukechilds/barterdex-api
 ```
 
 ## License
