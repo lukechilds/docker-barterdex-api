@@ -16,3 +16,9 @@ RUN git clone https://github.com/nanomsg/nanomsg && \
   sudo ldconfig  && \
   cd .. && \
   rm -rf nanomsg
+
+RUN git clone https://github.com/jl777/SuperNET && \
+  cd SuperNET/iguana && \
+  git checkout spvdex && \
+  cd exchanges && \
+  ./install
