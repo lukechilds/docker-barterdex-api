@@ -1,4 +1,10 @@
 #!/bin/bash
 
 cd ~/SuperNET/iguana
+
+if [ -z "$PASSPHRASE" ]; then
+  echo "No PASSPHRASE environment variable"
+  exit 1
+fi
+
 command ./marketmaker "{\"gui\":\"nogui\",\"client\":1, \"userhome\":\"/${HOME#"/"}\", \"passphrase\":\"$PASSPHRASE\", \"coins\":$COINS}"
