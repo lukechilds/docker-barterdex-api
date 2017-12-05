@@ -17,8 +17,9 @@ RUN git clone https://github.com/nanomsg/nanomsg && \
   cd .. && \
   rm -rf nanomsg
 
-RUN git clone https://github.com/jl777/SuperNET && \
-  cd SuperNET/iguana && \
+RUN git clone https://github.com/jl777/SuperNET
+
+RUN cd SuperNET/iguana && \
   git checkout spvdex && \
   ./m_mm
 
