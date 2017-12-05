@@ -6,7 +6,7 @@ WORKDIR /root
 
 RUN apt-get update
 
-RUN apt-get install -y git build-essential cmake sudo libcurl4-openssl-dev
+RUN apt-get install -y git build-essential cmake sudo libcurl4-openssl-dev curl
 
 RUN git clone https://github.com/nanomsg/nanomsg && \
   cd nanomsg && \
