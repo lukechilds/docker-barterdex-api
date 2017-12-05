@@ -12,4 +12,4 @@ if [ -z "$COINS" ]; then
   COINS=$coins
 fi
 
-command ./marketmaker "{\"gui\":\"nogui\",\"client\":1, \"userhome\":\"/${HOME#"/"}\", \"passphrase\":\"$PASSPHRASE\", \"coins\":$COINS}"
+command ./marketmaker "{\"gui\":\"nogui\", \"client\":1, \"docker\":1, \"userhome\":\"/${HOME#"/"}\", \"passphrase\":\"$PASSPHRASE\", \"coins\":$COINS}"
