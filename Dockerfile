@@ -20,5 +20,4 @@ RUN git clone https://github.com/nanomsg/nanomsg && \
 RUN git clone https://github.com/jl777/SuperNET && \
   cd SuperNET/iguana && \
   git checkout spvdex && \
-  cd exchanges && \
-  ./install
+  ./m_mm
