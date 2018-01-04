@@ -1,8 +1,8 @@
 FROM ubuntu:16.04
 LABEL maintainer="Luke Childs <lukechilds123@gmail.com>"
 
-ENV HOME /root
-WORKDIR /root
+ENV HOME /app
+WORKDIR /app
 
 RUN apt-get update
 
@@ -27,6 +27,10 @@ RUN mv ~/SuperNET/iguana/marketmaker /usr/local/bin && \
   mv ~/SuperNET/iguana/exchanges/coins ~/coins && \
   rm -rf ~/SuperNET
 
+RUN groupadd -g 999 appuser && \
+  useradd -r -u 999 -g appuser appuser
+
 COPY ./bin /usr/local/bin
+USER appuser
 ENTRYPOINT ["init"]
 EXPOSE 7783
