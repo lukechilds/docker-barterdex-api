@@ -20,7 +20,7 @@ RUN git clone https://github.com/nanomsg/nanomsg && \
 RUN git clone https://github.com/jl777/SuperNET
 
 RUN cd SuperNET/iguana && \
-  git checkout spvdex && \
+  git checkout dev && \
   ./m_mm
 
 RUN mv ~/SuperNET/iguana/marketmaker /usr/local/bin && \
