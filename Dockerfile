@@ -8,22 +8,13 @@ RUN apt-get update
 
 RUN apt-get install -y git build-essential cmake sudo libcurl4-openssl-dev curl
 
-RUN git clone https://github.com/nanomsg/nanomsg && \
-  cd nanomsg && \
-  cmake . && \
-  make && \
-  sudo make install && \
-  sudo ldconfig  && \
-  cd .. && \
-  rm -rf nanomsg
-
 RUN git clone https://github.com/jl777/SuperNET
 
 RUN cd SuperNET/iguana && \
   git checkout dev && \
-  ./m_mm
+  ./m_mm_StaticNanoMsg
 
-RUN mv ~/SuperNET/iguana/marketmaker /usr/local/bin && \
+RUN mv ~/SuperNET/agents/marketmaker /usr/local/bin && \
   mv ~/SuperNET/iguana/exchanges/coins ~/coins && \
   rm -rf ~/SuperNET
 
