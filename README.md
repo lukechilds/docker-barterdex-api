@@ -19,6 +19,16 @@ Checkout this repo and run:
 docker build -t barterdex-api .
 ```
 
+You can also specify a custom branch/commit to build via a build arg:
+
+```shell
+# Build at tip of master
+docker build -t barterdex-api --build-arg CHECKOUT=master .
+
+# Build at commit 715b02e
+docker build -t barterdex-api --build-arg CHECKOUT=715b02e .
+```
+
 ## License
 
 MIT © Luke Childs
