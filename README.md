@@ -7,7 +7,7 @@
 
 ## Usage
 
-```
+```shell
 docker run -e PASSPHRASE="secure passphrase" -p 127.0.0.1:7783:7783 lukechilds/barterdex-api
 ```
 
@@ -15,7 +15,7 @@ docker run -e PASSPHRASE="secure passphrase" -p 127.0.0.1:7783:7783 lukechilds/b
 
 Checkout this repo and run:
 
-```
+```shell
 docker build -t barterdex-api .
 ```
 
