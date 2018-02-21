@@ -1,6 +1,7 @@
 FROM ubuntu:16.04
 LABEL maintainer="Luke Childs <lukechilds123@gmail.com>"
 
+ARG CHECKOUT
 ENV HOME /root
 WORKDIR /root
 
@@ -20,7 +21,8 @@ RUN git clone https://github.com/nanomsg/nanomsg && \
 RUN git clone https://github.com/jl777/SuperNET
 
 RUN cd SuperNET/iguana && \
-  git checkout dev && \
+  git checkout "${CHECKOUT:-dev}" && \
+  echo "Building marketmaker on branch $(git rev-parse --abbrev-ref HEAD) at commit $(git rev-parse HEAD)" && \
   ./m_mm
 
 RUN mv ~/SuperNET/iguana/marketmaker /usr/local/bin && \
