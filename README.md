@@ -11,6 +11,14 @@
 docker run -e PASSPHRASE="secure passphrase" -p 127.0.0.1:7783:7783 lukechilds/barterdex-api
 ```
 
+## Building your own
+
+Checkout this repo and run:
+
+```
+docker build -t barterdex-api .
+```
+
 ## License
 
 MIT © Luke Childs
